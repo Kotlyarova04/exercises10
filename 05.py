@@ -1,5 +1,6 @@
 class RomanNumber:
-    decimal_dict = {'M': 1000,'CM': 900, 'D': 500, 'CD': 400, 'C': 100, 'XC': 90,'L': 50, 'XL': 40,'X': 10, 'IX': 9, 'V': 5, 'IV': 4, 'I': 1}
+    decimal_dict = {'M': 1000, 'CM': 900, 'D': 500, 'CD': 400, 'C': 100, 'XC': 90, 'L': 50, 'XL': 40, 'X': 10, 'IX': 9,
+                    'V': 5, 'IV': 4, 'I': 1}
 
     def __init__(self, number):
         if isinstance(number, int):
@@ -17,7 +18,6 @@ class RomanNumber:
             else:
                 self.rom_value = None
                 print('ошибка')
-
 
     @staticmethod
     def is_int(value):
@@ -53,6 +53,7 @@ class RomanNumber:
                     decimal_value += self.decimal_dict[self.rom_value[i]]
                     i += 1
             return decimal_value
+
     def roman_number(self):
         roman = ''
         ss = int(self.int_value)

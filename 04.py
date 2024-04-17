@@ -1,5 +1,5 @@
 class RomanNumber:
-    decimal_dict = {'M': 1000, 'D': 500, 'C': 100,'L': 50, 'X': 10, 'V': 5, 'I': 1}
+    decimal_dict = {'M': 1000, 'D': 500, 'C': 100, 'L': 50, 'X': 10, 'V': 5, 'I': 1}
     decimal_couple = {'CM': 900, 'CD': 400, 'XC': 90, 'XL': 40, 'IX': 9, 'IV': 4}
 
     def __init__(self, number):
@@ -27,7 +27,7 @@ class RomanNumber:
     def decimal_number(self):
         decimal_value = 0
         i = 0
-        if self.rom_value != None:
+        if self.rom_value is not None:
             while i < len(self.rom_value):
                 if i < (len(self.rom_value) - 1) and self.rom_value[i:i + 2] in self.decimal_couple:
                     decimal_value += self.decimal_couple[self.rom_value[i:i + 2]]
@@ -39,7 +39,6 @@ class RomanNumber:
 
     def __repr__(self):
         return f'{self.rom_value}'
-
 
 
 num_1 = RomanNumber('VI')
