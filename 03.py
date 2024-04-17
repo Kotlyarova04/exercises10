@@ -1,3 +1,4 @@
+import random
 class NavalBattle:
     playing_field = [['~'] * 10 for i in range(10)]
 
