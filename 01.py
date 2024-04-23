@@ -27,6 +27,7 @@ class Circle:
 c1 = Circle()
 c2 = Circle(7)
 c3 = Circle(5)
+print(c1)
 print(c2.area())
 print(c3)
 print(Circle.pi)

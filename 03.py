@@ -43,14 +43,11 @@ class NavalBattle:
                 while not placed:
                     x = random.randint(0, 9)
                     y = random.randint(0, 9)
-                    print(x, y)
                     direction = random.choice(directions)
 
                     if cls.can_place_ship(x, y, direction, ship_length[ship_type]):
                         for i in range(ship_length[ship_type]):
-                            print(i)
                             cls.playing_field[y + i * direction[1]][x + i * direction[0]] = 1
-                            print(y + i * direction[1])
                         placed = True
 
     @staticmethod
